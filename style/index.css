@@ -1,0 +1,137 @@
+#content {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-weight: 100;
+	font-size: 50px;
+}
+
+#period-name {
+	font-size: 50px;
+}
+
+#in {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+#countdown {
+	font-size: 100px;
+	font-weight: 100;
+}
+
+#sidebar {
+	position: fixed;
+	right: 0;
+	top: 0;
+	text-align: right;
+	font-size: 12px
+}
+
+#top-line-notice {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center
+}
+
+.really-annoying {
+	position: fixed;
+	font-size: 50px;
+	font-weight: 100;
+	z-index: -1;
+	color: #CC0000
+}
+
+#tl {
+	top: 0;
+	left: 0
+}
+
+#br {
+	bottom: 0;
+	right: 0
+}
+
+.arrow {
+	height: 0;
+	width: 0;
+	border: 25px solid transparent;
+	opacity: 0.25;
+	position: fixed;
+	z-index: 4;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	cursor: pointer;
+}
+
+.arrow:hover {
+	opacity: 1;
+}
+
+.pane {
+	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
+	-ms-transition:all 1s ease;
+	-o-transition:all 1s ease;
+	transition:all 1s ease;
+	height: 98%;
+	padding: 10px;
+	position: fixed;
+	top: 1%;
+	margin-bottom: 1%;
+	z-index: 3;
+	overflow: auto;
+	width: 40%;
+	background-color: rgba(0,0,0,0.75);
+}
+
+#left-pane-arrow {
+	border-left-color: white;
+	left: 0;
+	top: 75%;
+}
+
+#left-pane-arrow.expanded {
+	border-left-color: transparent;
+	border-right-color: white;
+}
+#left-pane {
+	left: -100%;
+}
+
+#left-pane.expanded {
+	left: 0%;
+	border-right: 0.5px solid white;
+}
+
+#left-pane h1 {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	top: 50%;
+	margin-top: -20px;
+}
+
+#left-pane table {
+	width: 100%;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 100;
+	cursor: default;
+}
+
+.changed {
+	color: #FFE733;
+}
+
+.cancelled {
+	text-decoration: line-through;
+	font-style: italic;
+}
