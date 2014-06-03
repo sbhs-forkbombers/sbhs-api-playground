@@ -1,0 +1,7 @@
+{
+  "name": "sbhs-api-playground",
+  "version": "0.1.0",
+  "devDependencies": {
+    "request": "^2.36.0"
+  }
+}
