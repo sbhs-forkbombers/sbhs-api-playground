@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" href="/style/common.css" />
-<title>SBHS OAuth2 API Playground</title>
-<style>
-pre {
-	display: inline;
-}
-</style>
-</head>
-<body>
-<h1>Hello!</h1>
-You'll need to <a href="/try_do_oauth">Login</a> before you use any of the links below.<br /><br />
-It's recommended that you use an addon/extension like <a href="https://addons.mozilla.org/en-US/firefox/addon/jsonview">JSONView for Firefox</a> or <a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc">JSONView for Chrome</a> before using any of these links.<br />
-The code may be found <a href="https://github.com/sbhs-forkbombers/sbhs-api-playground">here</a>. 
-<h1>Timetable APIs</h1>
-<ul>
-	<li><pre><a href="/api/daytimetable.json">/api/timetable/daytimetable.json</a></pre> - today's timetable including changed rooms/teachers (raw SBHS data). <a href="http://student.sbhs.net.au/help/api/doc/timetable#daytimetable">Docs</a></li>
-	<li><pre><a href="/api/timetable.json">/api/timetable/timetable.json</a></pre> - full timetable, not real-time. <a href="http://student.sbhs.net.au/help/api/doc/timetable#timetable">Docs</a></li>
-</ul>
+	<head>
+		<link rel="stylesheet" href="/style/common.css" />
+		<title>SBHS OAuth2 API Playground</title>
+		<style>
+			pre {
+				display: inline;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Hello!</h1>
+		You'll need to <a href="/try_do_oauth">Login</a> before you use any of the links below.<br /><br />
+		It's recommended that you use an addon/extension like <a href="https://addons.mozilla.org/en-US/firefox/addon/jsonview">JSONView for Firefox</a> or <a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc">JSONView for Chrome</a> before using any of these links.<br />
+		The code may be found <a href="https://github.com/sbhs-forkbombers/sbhs-api-playground">here</a>.
+		<h1>Timetable APIs</h1>
+		<ul>
+			<li><pre><a href="/api/daytimetable.json">/api/timetable/daytimetable.json</a></pre> - today's timetable including changed rooms/teachers (raw SBHS data). <a href="http://student.sbhs.net.au/help/api/doc/timetable#daytimetable">Docs</a></li>
+			<li><pre><a href="/api/timetable.json">/api/timetable/timetable.json</a></pre> - full timetable, not real-time. <a href="http://student.sbhs.net.au/help/api/doc/timetable#timetable">Docs</a></li>
+			<li><pre><a href="/api/belltimes">/api/timetable/bells.json</a></pre> - today's schedule. Used by sbhsbelltimes.tk and sbhstimetable.tk</li>
+	</ul>
 
-<h1>Daily news API</h1>
-<ul><li><pre>
-<a href="/api/dailynews.json">/api/dailynews/list.json</a></pre> - daily notices (mango sheet). <a href="http://student.sbhs.net.au/help/api/doc/dailynews">Docs</a></li>
-</ul>
+	<h1>Daily news API</h1>
+	<ul>
+		<li><pre><a href="/api/dailynews.json">/api/dailynews/list.json</a></pre> - daily notices (mango sheet). <a href="http://student.sbhs.net.au/help/api/doc/dailynews">Docs</a></li>
+	</ul>
 
-<h1>User Details</h1>
-<ul>
-	<li><pre><a href="/api/participation.json">/api/details/participation.json</a></pre> - a user's award scheme points information. <a href="http://student.sbhs.net.au/help/api/doc/details#participation">Docs</a></li>
-	<li><pre><a href="/api/userinfo.json">/api/details/userinfo.json</a></pre> - a user's information. <a href="http://student.sbhs.net.au/help/api/doc/details#userinfo">Docs</a></li>
-</ul>
+	<h1>User Details</h1>
+	<ul>
+		<li><pre><a href="/api/participation.json">/api/details/participation.json</a></pre> - a user's award scheme points information. <a href="http://student.sbhs.net.au/help/api/doc/details#participation">Docs</a></li>
+		<li><pre><a href="/api/userinfo.json">/api/details/userinfo.json</a></pre> - a user's information. <a href="http://student.sbhs.net.au/help/api/doc/details#userinfo">Docs</a></li>
+	</ul>
+
+	<h1>Custom APIs</h1>
+	These are wrappers around the existing APIs. They provide data in a more convenient form for the client.
+	<ul>
+		<li><pre><a href="/api/today.json">/api/today.json</a></pre> - a wrapper around <pre>/api/daytimetable.json</pre></li>
+		<li><pre><a href="/api/notices.json">/api/notices.json</a></pre> - a wrapper around <pre>/api/notices.json</pre></li>
+	</ul>
+
+	<h1>Session Manipulation/Display</h1>
+	<ul>
+		<li><pre><a href="/session_info">/session_info</a></pre></li>
+		<li><pre><a href="/logout">/logout</a></pre></li>
+		<li><pre><a href="/reset_access_token">/reset_access_token</a></pre></li>
+		<li><pre><a href="/refresh_token">/refresh_token</a></pre> - use the refreshToken to acquire a new access code.</li>
+	</ul>
 </body>
 </html>

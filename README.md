@@ -3,13 +3,16 @@ sbhs-oauth-playground
 
 With the advent of the new API, there's not really any way to get the API's output without writing an entire app. So, here is the app that you would write.
 
+(This app is essentially a stripped-down version of sbhs-forkbombers/sbhs-timetable-node)
+
 ##Configuration
 1. clone the repo
 2. npm install
-3. node server.js
+3. npm install -g grunt-cli (if you haven't done so already
+3. grunt
 
-###It errors the second time I try and start it
-If you're on linux/osx you need to `rm /tmp/playground.sock` before running it.
+### Bonus!
+You don't even have to restart the app. It should automatically reload when you make any changes.
 
 ##Code layout
 
