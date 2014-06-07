@@ -74,11 +74,6 @@ function cleanSessions() { // clear sessions
 	console.log('[core] Wrote ' + Object.keys(global.sessions).length + ' sessions to disk');
 }
 
-var reloadWatcher = fs.watch('.reload', { persistent: false }, function() {
-	'use strict';
-	cleanSessions();
-});
-
 process.on('SIGHUP', function() {
 	'use strict';
 	cleanSessions();
