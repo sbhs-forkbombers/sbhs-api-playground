@@ -5,3 +5,4 @@ users.json
 belltimes.concat.js
 config.js
 .reload
+sessions.json
